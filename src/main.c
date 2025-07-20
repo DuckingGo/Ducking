@@ -9,6 +9,15 @@ struct Book
     int year_release;
 };
 
+struct Student
+{
+    char name[50];
+    int age;
+    char major[50];
+    int year;
+    double gpa;
+};
+
 void learning_struct_book(struct Book b);
 int learning_switch_statement(char grade);
 int learning_while_loop(int n);
@@ -16,6 +25,7 @@ int learning_do_while_loop(int n);
 int learning_for_loop(int n);
 int learning_for_loop_array(int n[], int arr_len);
 void learning_nested_for_2d_dimension(int arr[][2], int rows, int cols);
+void learning_memory_address(struct Student s);
 
 int main()
 {
@@ -34,6 +44,8 @@ int main()
     };
 
     learning_nested_for_2d_dimension(nums, 3, 2);
+    struct Student s = {"Dokja", 18, "Computer Science", 2018, 3.5};
+    learning_memory_address(s);
 
     return 0;
 }
@@ -121,4 +133,9 @@ void learning_nested_for_2d_dimension(int arr[][2], int rows, int cols)
         }
         printf("\n");
     }
+}
+
+void learning_memory_address(struct Student s)
+{
+    printf("Student: %p and %d years old %p student %f gpa\n", (void*)s.name, s.age, (void*)s.major, s.gpa);
 }
