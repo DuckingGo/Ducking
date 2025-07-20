@@ -44,8 +44,8 @@ int main()
     };
 
     learning_nested_for_2d_dimension(nums, 3, 2);
-    // struct Student s = {"Dokja", 18, "Computer Science", 2018, 3.5};
-    // learning_memory_address(s);
+    struct Student s = {"Dokja", 18, "Computer Science", 2018, 3.5};
+    learning_memory_address(s);
 
     int age = 30;
     int * pAge = &age;
