@@ -1,0 +1,42 @@
+name: CI for DukcyGo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build
+        run: cmake --build build --config Debug
+
+      - name: Run executable (Linux/macOS)
+        if: matrix.os != 'windows-latest'
+        run: ./build/DuckyGo
+        working-directory: ${{ github.workspace }}
+
+      - name: Run executable (Windows)
+        if: matrix.os == 'windows-latest'
+        run: .\build\Debug\DuckyGo.exe
+        working-directory: ${{ github.workspace }}
