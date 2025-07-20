@@ -1,31 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int learning_switch_statement(char grade);
-
-struct Student
+struct Book
 {
-    char name[20];
-    char major[50];
-    int age;
-    double gpa;
-}
+    char title[50];
+    char author[20];
+    char genre[50];
+    int year_release;
+};
+
+void learning_struct_book(struct Book b);
+int learning_switch_statement(char grade);
 
 int main()
 {
     learning_switch_statement('A');
-
-    struct Student studen1;
-    studen1.age = 22;
-    studen1.gpa = 3.2;
-    strcpy(studen1.name, "John");
-    strcpy(studen1.major, "Computer Science");
-
-    printf("%s\n", studen1.name);
-    printf("%s\n", studen1.major);
-    printf("%d\n", studen1.age);
-    printf("%f\n", studen1.gpa);
-
+    struct Book b = {"Avatar", "Tim handrick", "Fantasy", 2008};
+    learning_struct_book(b);
     return 0;
 }
 
@@ -53,4 +44,9 @@ int learning_switch_statement(char grade)
     }
 
     return 0;
+}
+
+void learning_struct_book(struct Book b)
+{
+    printf("Book: %s by %s (%d)\n", b.title, b.author, b.year_release);
 }
