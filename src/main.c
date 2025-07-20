@@ -12,15 +12,20 @@ struct Book
 void learning_struct_book(struct Book b);
 int learning_switch_statement(char grade);
 int learning_while_loop(int n);
-int learning_do_while_looop(int n);
+int learning_do_while_loop(int n);
+int learning_for_loop(int n);
+int learning_for_loop_array(int n[], int arr_len);
 
 int main()
 {
     learning_switch_statement('A');
-    struct Book b = {"Avatar", "Tim handrick", "Fantasy", 2008};
+    struct Book b = {"Avatar", "Tim Handrick", "Fantasy", 2008};
     learning_struct_book(b);
-    learning_while_loop(10);
-    learning_do_while_looop(100);
+    learning_while_loop(5);
+    learning_do_while_loop(5);
+    learning_for_loop(10);
+    learning_for_loop_array((int[]){11, 24, 62, 43, 2}, 4);
+
     return 0;
 }
 
@@ -46,7 +51,6 @@ int learning_switch_statement(char grade)
         default:
             printf("Invalid grade\n");
     }
-
     return 0;
 }
 
@@ -63,9 +67,10 @@ int learning_while_loop(int n)
         printf("While Loop: %d\n", i);
         i++;
     }
+    return 0;
 }
 
-int learning_do_while_looop(int n)
+int learning_do_while_loop(int n)
 {
     int i = 1;
     do {
@@ -73,4 +78,23 @@ int learning_do_while_looop(int n)
         i++;
     } 
     while (i <= n);
+    return 0;
+}
+
+int learning_for_loop(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        printf("For Loop: %d\n", i);
+    }
+    return 0;
+}
+
+int learning_for_loop_array(int n[], int arr_len)
+{
+    for (int i = 0; i < arr_len; i++)
+    {
+        printf("Index array: %d the value: %d\n", i, n[i]);
+    }
+    return 0;
 }
