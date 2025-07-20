@@ -3,18 +3,29 @@
 int main()
 {
     int secret_number = 5;
+    int limit = 3;
+    int guess_count = 0;
+    int out_of_guess = 0;
     int guess;
 
-    while(guess != secret_number)
+    while(guess != secret_number && out_of_guess == 0)
     {
-        printf("Guess a number the computer think: ");
-        scanf("%d", &guess);
-        if (guess != secret_number)
+        if (guess_count < limit)
         {
-            printf("Try Again\n");
+            printf("Guess a number: ");
+            scanf("%d", &guess);
+            guess_count++;
+        } else
+        {
+            out_of_guess = 1;
         }
     }
-    printf("Congratulation! You're Right!\n");
+    if (out_of_guess == 1)
+    {
+        printf("You Lose\n");
+    } else {
+        printf("You Win\n");
+    }
 
     return 0;
 }
