@@ -4,7 +4,6 @@
 
 > "Because ducks can code better than me" 🦆💻
 
----
 
 ## 🚀 Quick Start
 
@@ -18,20 +17,11 @@ cmake .. && make
 
 ![Compiling...](https://media.giphy.com/media/3o7TKUM3IgJBX2as9O/giphy.gif)
 
----
-
 ## 🔥 Features
-
-**100% Duck-powered**  
-  ![Duck Debugging](https://media.giphy.com/media/3o6Zt6KHxJTk7QnQ36/giphy.gif)
 
 **Memory Management**  
   ![Memory Leak](https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif)
 
-**Error Handling**  
-  ![Error](https://media.giphy.com/media/l0HU7JIWajUznztI4/giphy.gif)
-
----
 
 ## 📊 Code Stats
 
