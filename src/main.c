@@ -26,6 +26,26 @@ int main()
     learning_for_loop(10);
     learning_for_loop_array((int[]){11, 24, 62, 43, 2}, 4);
 
+    int nums[3][2] = {
+                    {1, 2},
+                    {3, 4},
+                    {5, 6},
+                };
+    // printf("Two dimensional Array with value %d\n", nums[0][0]);
+    // printf("Two dimensional Array with value %d\n", nums[0][1]);
+    // printf("Two dimensional Array with value %d\n", nums[1][0]);
+    // printf("Two dimensional Array with value %d\n", nums[1][1]);
+    // printf("Two dimensional Array with value %d\n", nums[2][0]);
+    // printf("Two dimensional Array with value %d\n", nums[2][1]);
+    
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j; j < 2; j++)
+        {
+            printf("%d", nums[i][j]);
+        }
+    }
+
     return 0;
 }
 
