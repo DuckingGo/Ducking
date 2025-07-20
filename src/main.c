@@ -15,6 +15,7 @@ int learning_while_loop(int n);
 int learning_do_while_loop(int n);
 int learning_for_loop(int n);
 int learning_for_loop_array(int n[], int arr_len);
+void learning_nested_for_2d_dimension(int arr[][2], int rows, int cols);
 
 int main()
 {
@@ -27,24 +28,12 @@ int main()
     learning_for_loop_array((int[]){11, 24, 62, 43, 2}, 4);
 
     int nums[3][2] = {
-                    {1, 2},
-                    {3, 4},
-                    {5, 6},
-                };
-    // printf("Two dimensional Array with value %d\n", nums[0][0]);
-    // printf("Two dimensional Array with value %d\n", nums[0][1]);
-    // printf("Two dimensional Array with value %d\n", nums[1][0]);
-    // printf("Two dimensional Array with value %d\n", nums[1][1]);
-    // printf("Two dimensional Array with value %d\n", nums[2][0]);
-    // printf("Two dimensional Array with value %d\n", nums[2][1]);
-    
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j; j < 2; j++)
-        {
-            printf("%d", nums[i][j]);
-        }
-    }
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
+
+    learning_nested_for_2d_dimension(nums, 3, 2);
 
     return 0;
 }
@@ -117,4 +106,19 @@ int learning_for_loop_array(int n[], int arr_len)
         printf("Index array: %d the value: %d\n", i, n[i]);
     }
     return 0;
+}
+
+void learning_nested_for_2d_dimension(int arr[][2], int rows, int cols) 
+{
+    for (int i = 0; i < rows; i++) {
+        printf("Row %d: ", i);
+        
+        for (int j = 0; j < cols; j++) {
+            printf("%d", arr[i][j]);
+            if (j < cols - 1) {
+                printf(", ");
+            }
+        }
+        printf("\n");
+    }
 }
