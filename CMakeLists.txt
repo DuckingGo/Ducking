@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 include_directories(include)
 
 set(SOURCE_FILES
-    src/main.c
+    src/guessing.c
 )
 
 add_executable(DuckyGo ${SOURCE_FILES})
