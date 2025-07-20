@@ -29,32 +29,28 @@ void learning_memory_address(struct Student s);
 
 int main()
 {
-    // learning_switch_statement('A');
-    // struct Book b = {"Avatar", "Tim Handrick", "Fantasy", 2008};
-    // learning_struct_book(b);
-    // learning_while_loop(5);
-    // learning_do_while_loop(5);
-    // learning_for_loop(10);
-    // learning_for_loop_array((int[]){11, 24, 62, 43, 2}, 4);
+    learning_switch_statement('A');
+    struct Book b = {"Avatar", "Tim Handrick", "Fantasy", 2008};
+    learning_struct_book(b);
+    learning_while_loop(5);
+    learning_do_while_loop(5);
+    learning_for_loop(10);
+    learning_for_loop_array((int[]){11, 24, 62, 43, 2}, 4);
 
-    // int nums[3][2] = {
-    //     {1, 2},
-    //     {3, 4},
-    //     {5, 6}
-    // };
+    int nums[3][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
 
-    // learning_nested_for_2d_dimension(nums, 3, 2);
+    learning_nested_for_2d_dimension(nums, 3, 2);
     // struct Student s = {"Dokja", 18, "Computer Science", 2018, 3.5};
     // learning_memory_address(s);
 
     int age = 30;
     int * pAge = &age;
-    double gpa = 3.4;
-    double * pGpa = &gpa;
-    char grade = 'A';
-    char * pGrade = &grade;
 
-    printf("age's memory address: %p\n", &age);
+    // printf("%d\n", &*&pAge);
 
     return 0;
 }
